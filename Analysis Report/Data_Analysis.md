@@ -10,7 +10,7 @@ LIMIT 1
 | 9           | Madan     | Mohan      | Senior General Manager| NULL       | L7     | 1/26/1961 0:00    | 1/14/2016 0:00    | 1008 Vrinda Ave MT| Edmonton | AB    | Canada  | T5K 2N1     | +1 (780) 428-9482 | +1 (780) 428-3457 | madan.mohan@chinookcorp.com |
 
 ---
-
+---
 
 **Which countries have the most Invoices?**
 ```
@@ -49,6 +49,7 @@ ORDER BY countofinvoices DESC
 <img width="699" alt="image" src="https://github.com/Himanshu2902/SQL_Project-Digital-Music-Store-Analysis/assets/91212648/58c3c88a-bd94-403d-8b11-4a46fe35c955">
 
 ---
+---
 
 **What are top 3 values of total invoice?**
 ```
@@ -63,6 +64,9 @@ LIMIT 3
 | 19.8                           |
 | 19.8                           |
 
+---
+---
+
 
 **Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. Write a query that returns one city that has the highest sum of invoice totals. Return both the city name & sum of all invoice totals**
 ```
@@ -76,6 +80,7 @@ LIMIT 1
 |-----------|-----------------------|
 | Prague    | 273.24                |
 
+---
 ---
 
 **Who is the best customer? The customer who has spent the most money will be declared the best customer. Write a query that returns the person who has spent the most money**
@@ -93,7 +98,7 @@ LIMIT 1
 | 5           | František Wichterlová | 144.54 |
 
 ---
-
+---
 **Let's invite the artists who have written the most rock music in our dataset. Write a query that returns the Artist name and total track count of the top 10 rock bands**
 ```
 SELECT artist.artist_id,artist.name AS artist_name, Count(artist.artist_id) as no_of_tracks
@@ -126,6 +131,7 @@ LIMIT 10
 <img width="706" alt="image" src="https://github.com/Himanshu2902/SQL_Project-Digital-Music-Store-Analysis/assets/91212648/a1f8eaa6-2bd6-4b5f-b33b-2ba783a17321">
 
 ---
+---
 
 **Return all the track names that have a song length longer than the average song length.Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first**
 ```
@@ -147,7 +153,8 @@ ORDER BY milliseconds DESC
 | Battlestar Galactica, Pt. 3    | 2927802      |
 | Take the Celestra              | 2927677      |
 
-
+---
+---
 
 **What are the most popular countries for music purchases?**
 ```
@@ -170,6 +177,8 @@ LIMIT 10
 | India            | 183.15 |
 | Ireland          | 114.84 |
 
+---
+---
 
 **Top Selling Genres: Find the top 3 genres based on the total number of tracks sold. Include the genre name and the total number of tracks sold for each genre**
 ```
@@ -187,6 +196,8 @@ LIMIT 3
 | Metal              | 619                         |
 | Alternative & Punk| 492                         |
 
+---
+---
 
 **Sales Analysis: Retrieve the total number of invoices, the total amount billed, and the average invoice amount for each customer. Sort the results by the total amount billed in descending order.**
 ```
@@ -212,6 +223,8 @@ ORDER BY  total_amount_billed DESC
 | 1           | Luís       | Gonçalves | 13                       | 108.9                | 8.376923077            |
 | 13          | Fernanda   | Ramos     | 15                       | 106.92               | 7.128                  |
 
+---
+---
 
 **Playlist Analysis:Find the names of playlists along with the total number of unique tracks in each playlist. Include only those playlists that have more than 10 unique tracks.**
 ```
@@ -236,8 +249,10 @@ ORDER BY count_of_track DESC;
 | Classical 101 - Next Steps  | 25              |
 | Grunge                      | 15              |
 
+---
+---
 
-**Retrieve the top 5 best-selling tracks based on the total number of units sold.Display the track name, album name, artist name, and the total number of units sold for each track.**
+**Retrieve the top 5 best-selling tracks based on the total number of units sold.Display the track name, album name, artist name, and the total number of units sold for each tr-ck.**
 ```
 SELECT t.name AS track_name,
 al.title as album_title,
@@ -259,7 +274,8 @@ LIMIT 5
 | Hey Joe               | Are You Experienced     | Jimi Hendrix  | 13                          |
 | Third Stone From The Sun | Are You Experienced  | Jimi Hendrix  | 13                          |
 
-
+---
+---
 
 
 
