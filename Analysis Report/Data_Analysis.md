@@ -278,7 +278,30 @@ LIMIT 5
 ---
 
 
+**Artist Popularity Analysis:
+Identify the top 3 most popular artists based on the total number of tracks sold across all albums.Display the artist names along with the total number of tracks sold for each artist.**
+```
+SELECT ar.artist_id, ar.name as artist_name, COUNT(il.quantity) as total_track_sold
+FROM artist AS ar
+JOIN album as al ON al.artist_id = ar.artist_id
+JOIN track as t ON t.album_id = al.album_id
+JOIN invoice_line as il ON il.track_id = t.track_id
+GROUP BY ar.artist_id, ar.name
+ORDER BY total_track_sold DESC
+LIMIT 3
+```
 
+| Artist ID | Artist Name   | Total Tracks Sold |
+|-----------|---------------|-------------------|
+| 51        | Queen         | 192               |
+| 94        | Jimi Hendrix  | 187               |
+| 110       | Nirvana       | 130               |
+
+<img width="687" alt="image" src="https://github.com/Himanshu2902/SQL_Project-Digital-Music-Store-Analysis/assets/91212648/ce6c290e-f3d7-41c5-a031-7d479d325083">
+
+
+---
+---
 
 
 
